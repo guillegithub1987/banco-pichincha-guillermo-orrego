@@ -1,0 +1,19 @@
+.mainLayout {
+    margin: 0 50px;
+
+    @media (max-width: 1024px) {
+        margin: 0 20px;
+    }
+
+    @media (max-width: 375px) {
+        margin: 0 15px;
+    }
+
+    .mainLayout__mainSection {
+        padding-top: 44px;
+        height: 100%;
+        max-width: 1390px;
+        margin: 0 auto;
+        padding-bottom: 40px;
+    }
+}

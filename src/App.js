@@ -1,25 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import Layout from './components/Layout/Layout';
+import MainOptions from './components/MainOptions/MainOptions';
+import PokemonList from './components/PokemonList/PokemonsList';
+import ModalOverlay from './components/UI/ModalOverlay/ModalOverlay';
+
+import { useSelector, useDispatch } from 'react-redux';
+import { pokemonActions } from './store/pokemon-slice';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const modalOpen = useSelector((state) => state.pokemon.modalOpen);
+
+    const dispatch = useDispatch();
+
+    const cancelHandler = () => {
+        dispatch(pokemonActions.setModalOpen(false));
+        dispatch(pokemonActions.setIsEditing(true));
+    };
+
+    return (
+        <Layout>
+            <MainOptions />
+            <PokemonList />
+            {modalOpen && <ModalOverlay onCancel={cancelHandler} />}
+        </Layout>
+    );
 }
 
 export default App;

@@ -1,0 +1,20 @@
+@import '../../../sass/_colors.scss';
+
+.button {
+    font: inherit;
+    border: 1px solid $color-purple1;
+    background: $color-purple1;
+    color: white;
+    padding: 0.25rem 1rem;
+    cursor: pointer;
+
+    &:hover,
+    &:active {
+        background: $color-purple2;
+        border-color: $color-purple2;
+    }
+
+    &:focus {
+        outline: none;
+    }
+}

@@ -1,0 +1,74 @@
+@import '../../sass/colors';
+
+.form {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 800px;
+    height: auto;
+    z-index: 100;
+    overflow: hidden;
+    border: 1px solid $color-gray1;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    background-color: $color-white1;
+
+    .form__title {
+        align-items: center;
+        color: $color-black1;
+        cursor: pointer;
+        display: flex;
+        font-size: 18px;
+        font-weight: bold;
+        letter-spacing: 4.63px;
+        display: flex;
+        justify-content: center;
+        margin: 0;
+        cursor: default;
+    }
+
+    .form__controls {
+        margin: 30px 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .form__controls--column {
+            display: flex;
+            flex-direction: column;
+            width: 30%;
+
+            &:first-child {
+                margin-right: 180px;
+            }
+
+            .control {
+                display: flex;
+                margin-bottom: 15px;
+                justify-content: space-between;
+                height: 30px;
+
+                input {
+                    &:focus {
+                        outline: none;
+                    }
+                }
+
+                .requiredEmpty {
+                    border-color: #FF0000;
+                }
+            }
+        }
+    }
+
+    .form__actions {
+        display: flex;
+        justify-content: center;
+
+        [type="submit"] {
+            margin-right: 30px;
+        }
+    }
+}
