@@ -11,6 +11,10 @@
         grid-gap: 1px;
         background-color: $color-black1;
 
+        @media(max-width: 768px) {
+            display: none;
+        }
+
         .header__item {
             display: flex;
             justify-content: center;

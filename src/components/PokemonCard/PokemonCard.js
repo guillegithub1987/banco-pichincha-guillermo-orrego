@@ -25,28 +25,35 @@ const PokemonCard = ({ pokemon }) => {
     return (
         <section className={classes.pokemon}>
             <div className={classes.pokemon__item}>
+                <h1 className={classes['pokemon__item--title']}>Nombre</h1>
                 <h1 className={classes['pokemon__item--label']}>
                     {pokemon.name}
                 </h1>
             </div>
             <div className={classes.pokemon__item}>
-                <img
-                    className={classes['pokemon__item--image']}
-                    src={pokemon.image}
-                    alt={pokemon.name}
-                />
+                <h1 className={classes['pokemon__item--title']}>Imagen</h1>
+                <div className={classes['pokemon__item--image']}>
+                    <img
+                        className={classes.image}
+                        src={pokemon.image}
+                        alt={pokemon.name}
+                    />
+                </div>
             </div>
             <div className={classes.pokemon__item}>
+                <h1 className={classes['pokemon__item--title']}>Ataque</h1>
                 <h1 className={classes['pokemon__item--label']}>
                     {pokemon.attack}
                 </h1>
             </div>
             <div className={classes.pokemon__item}>
+                <h1 className={classes['pokemon__item--title']}>Defensa</h1>
                 <h1 className={classes['pokemon__item--label']}>
                     {pokemon.defense}
                 </h1>
             </div>
             <div className={classes.pokemon__item}>
+                <h1 className={classes['pokemon__item--title']}>Acciones</h1>
                 <div className={classes['pokemon__item--actions']}>
                     <img
                         className={classes.action}
