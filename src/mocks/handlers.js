@@ -52,4 +52,10 @@ export const handlers = [
             return res(ctx.json());
         }
     ),
+    rest.post(
+        'https://tribu-ti-staffing-desarrollo-afangwbmcrhucqfh.z01.azurefd.net/pkm-msa-evaluation/pokemon/',
+        async (req, res, ctx) => {
+            return res(ctx.json());
+        }
+    ),
 ];
